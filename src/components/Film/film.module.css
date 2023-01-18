@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Cavalier-Bold";
+  src: url(../Main/Cavalier-Bold.ttf);
+  font-style: normal;
+}
+div {
+  margin: 0px;
+}
+.film {
+  font-family: "Cavalier-Bold";
+  background-color: #f7f7f7;
+  width: 100vw;
+}
+.filmLinks {
+  color: #979dac;
+  font-size: 3rem;
+  display: inline-block;
+  padding: 0rem 0 2.75rem 1.5rem;
+}
+.filmLinks:hover {
+  color: #0466c8;
+  transform: translateY(-4px);
+  transform: scale(1.1);
+  transition: 1s;
+}
+.filmHeading {
+  text-align: center;
+  font-family: "Cavalier-Bold";
+  font-size: 4rem;
+  letter-spacing: 1.75px;
+  color: #0466c8;
+  padding: 2rem 0 3rem 0;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+h4 {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1.75px;
+  color: #979dac;
+  padding: 0 0 2rem 0;
+  position: relative;
+}
+.line {
+  content: "";
+  background: #0466c8;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0.35%;
+  width: 60%;
+  margin-top: -1rem;
+}
+.votingContainer {
+  background-color: #f7f7f7;
+  width: 100vw;
+  overflow: hidden;
+}
+.linkAndImageWrapper {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+}
+.linksImageWrapper {
+  margin-left: 39rem;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+.filmLinksWrapper {
+  margin-left: 3rem;
+}
+.justin {
+  box-shadow: 20px 20px 5px #ccc;
+  max-height: 430px;
+  border-radius: 10px;
+}
+.chuy {
+  display: none;
+}
+.justin:hover {
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+.categoryContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 4rem;
+}
+.btnAndGame {
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+.radio {
+  width: 30%;
+  height: 1.3rem;
+  align-self: start;
+}
+.radio:hover {
+  transform: scale(1.2);
+}
+.voting {
+  color: #0466c8;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.5rem;
+  /* padding: 0 0 2.5rem 0; */
+  text-align: center;
+}
+.voting:hover {
+  transform: scale(1.03);
+}
+.voteBtn {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.6rem;
+  font-family: "Cavalier-Bold";
+  max-width: 180px;
+  letter-spacing: 0.5px;
+  margin-bottom: 4rem;
+  background: #0466c8;
+  height: 44px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: inset 6px 6px 6px #0a3a69,
+    inset -6px -6px 6px rgba(202, 223, 247, 0.5);
+  transition: 0.5s;
+}
+.voteGraph {
+  background-color: #979dac;
+  border-radius: 18px;
+  height: 5rem;
+  width: 18%;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.voteBarSpace {
+  background-color: #0a3a69;
+  border-radius: 3px;
+  height: 3.5rem;
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* /// */
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.voteNumContainer {
+  display: flex;
+  justify-content: center;
+  width: 1rem;
+  padding-right: 0.9rem;
+}
+.voteBarNum {
+  color: #0466c8;
+}
+.voteBarFill {
+  background-color: #0466c8;
+  /* height: 30%; */
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  /* font-size: 1rem; */
+}
+.notes {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #7f848f;
+  font-size: 1rem;
+  padding: 0 0 2.2rem 0;
+  max-width: 60%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.escape {
+  position: absolute;
+  cursor: pointer;
+  height: 170px;
+  top: 8px;
+  left: 60px;
+  transition: 0.7s;
+}
+.escape:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+@media screen and (max-width: 1300px) {
+  .filmLinks {
+    font-size: 2.8rem;
+  }
+  .filmLinksWrapper {
+    margin-left: 1.3rem;
+  }
+  .notes {
+    max-width: 88%;
+    font-size: 0.94rem;
+  }
+  .linksImageWrapper {
+    margin-left: 2.4rem;
+    margin-right: 0.5rem;
+  }
+  .justin {
+    max-height: 400px;
+    margin-left: 14rem;
+  }
+  .voteGraph {
+    height: 5rem;
+    width: 30%;
+    margin: 0 auto 1rem auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  .escape {
+    height: 7rem;
+    top: 1.9rem;
+    left: 1.5rem;
+  }
+  .filmHeading {
+    font-size: 3.5rem;
+    padding: 1.2rem 0 3rem 0;
+  }
+  .filmLinks {
+    font-size: 2.8rem;
+  }
+  .filmLinksWrapper {
+    margin-left: 1.3rem;
+  }
+  .notes {
+    max-width: 88%;
+    font-size: 0.94rem;
+  }
+  .linksImageWrapper {
+    margin-left: 2.4rem;
+    margin-right: 0.5rem;
+  }
+  .justin {
+    max-height: 350px;
+    margin-left: 6rem;
+  }
+  h4 {
+    font-size: 1.7rem;
+    margin-top: -0.5rem;
+  }
+
+  .voting {
+    font-size: 1.4rem;
+  }
+  .voteGraph {
+    height: 5rem;
+    width: 40%;
+    margin: 0 auto 1rem auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .escape {
+    height: 5rem;
+    top: 1.7rem;
+    left: 1rem;
+  }
+  .filmHeading {
+    font-size: 3.2rem;
+    letter-spacing: 1.75px;
+    padding: 2rem 0 3rem 0;
+  }
+  .filmLinks {
+    font-size: 2rem;
+  }
+  .filmLinksWrapper {
+    margin-left: 0rem;
+  }
+  .notes {
+    max-width: 88%;
+    font-size: 0.94rem;
+  }
+  .linksImageWrapper {
+    margin-left: 2.4rem;
+    margin-right: 0.5rem;
+  }
+  .justin {
+    max-height: 250px;
+    margin-left: 4rem;
+  }
+  h4 {
+    font-size: 1.7rem;
+    margin-top: -0.5rem;
+  }
+  .line {
+    height: 0.25%;
+    margin-top: -1rem;
+  }
+  .voting {
+    font-size: 1.2rem;
+  }
+  .voteGraph {
+    height: 5rem;
+    width: 60%;
+    margin: 0 auto 1rem auto;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .chuy {
+    display: block;
+    height: 16rem;
+    margin-top: 4rem;
+    margin-right: -4rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .escape {
+    height: 3.2rem;
+    top: 2.75rem;
+    left: 0.7rem;
+  }
+  .filmHeading {
+    font-size: 3rem;
+    letter-spacing: 1.75px;
+    padding: 2rem 0 3rem 0;
+  }
+  .filmLinks {
+    font-size: 2rem;
+  }
+  .filmLinksWrapper {
+    margin-left: 0rem;
+  }
+  .notes {
+    max-width: 88%;
+    font-size: 0.9rem;
+  }
+  .linksImageWrapper {
+    margin-left: 2.4rem;
+    margin-right: 0.5rem;
+  }
+  .justin {
+    max-height: 250px;
+    margin-left: -1rem;
+  }
+  .chuy {
+    display: block;
+    height: 17rem;
+    margin-top: 4rem;
+    margin-right: -3rem;
+  }
+  .categoryContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 1rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    margin-top: -0.5rem;
+  }
+  .line {
+    height: 0.25%;
+    margin-top: -1rem;
+  }
+  .voting {
+    font-size: 0.9rem;
+  }
+  .voteGraph {
+    height: 4.2rem;
+    width: 70%;
+    margin: 0 auto 1rem auto;
+    gap: 1rem;
+  }
+}

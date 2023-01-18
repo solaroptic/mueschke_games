@@ -1,0 +1,254 @@
+:root {
+  --Mblue: #0466c8;
+  --Mgrey: #979dac;
+  --Mblue2: #70b6fc;
+  --Mgrey2: #bbc0ca;
+  --textColor: #30313b;
+}
+.ruleNav {
+  position: absolute;
+  font-family: "Cavalier-Bold";
+  color: aliceblue;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 12px;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.historyMenu {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  transition: 1s;
+  cursor: pointer;
+  color: #979dac;
+}
+.historyMenu:hover {
+  transform: scale(1.1);
+}
+.historyMenu.chosen {
+  color: #0466c8;
+}
+.historyMenu.ruleChosen {
+  color: aliceblue;
+}
+.historyMenuSpan {
+  font-size: 1.75rem;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Cavalier-Bold";
+  src: url(../Main/Cavalier-Bold.ttf);
+  font-style: normal;
+}
+
+p,
+h1 {
+  font-family: "Cavalier-Bold";
+}
+
+.escape {
+  position: absolute;
+  cursor: pointer;
+  height: 170px;
+  top: 8px;
+  left: 8rem;
+  transition: 0.7s;
+}
+.escape:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+/* for rules page */
+.accordion {
+  background-image: linear-gradient(var(--Mblue), var(--Mgrey));
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 3rem;
+}
+.accordionChunk {
+  list-style: none;
+  padding-left: 0;
+}
+.accordionChunk:first-child {
+  padding-top: 90px;
+}
+/* for each item */
+/* .accordionItem {
+  padding-left: 0;
+} */
+.accordionBtn {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 56px 0 56px;
+  max-width: 48%;
+  color: #0a3a69;
+  font-family: "Cavalier-Bold";
+  font-size: 1.9rem;
+  letter-spacing: 1.7px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #979dac;
+  height: 40px;
+  border-radius: 0px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: inset 6px 6px 6px #0a3a69, inset -6px -6px 6px #cadff780;
+  transition: 0.7s;
+  /* border-radius: 10px; */
+}
+.accordionBtn.active {
+  background: #696d77;
+}
+.accordionBtn.exp {
+  color: aqua;
+  border-radius: 10px;
+}
+.accordionCtrl {
+  opacity: 1;
+}
+.ruleWrap {
+  height: 0;
+  overflow: hidden;
+  padding: 0px 56px;
+  max-width: 48%;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #0466c8;
+  border-right: 4px solid #696d77;
+  border-left: 4px solid #696d77;
+  /* border-radius: 10px; */
+  transition: height ease 0.7s;
+}
+
+.ruleText {
+  color: #f1f1f3;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.guysDiv {
+  height: 20%;
+}
+.guys {
+  display: block;
+  height: 10rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* /////responsive */
+/* /////responsive */
+/* /////responsive */
+@media screen and (max-width: 1150px) {
+  .escape {
+    height: 140px;
+    top: 0.65rem;
+    left: 4%;
+  }
+  .accordionBtn {
+    max-width: 60%;
+    padding: 5px 38px 0 38px;
+    letter-spacing: 1.5px;
+  }
+  .ruleWrap {
+    padding: 0px 56px;
+    max-width: 60%;
+  }
+  .accordionChunk:first-child {
+    padding-top: 80px;
+  }
+  .ruleNav {
+    top: 20%;
+  }
+}
+@media screen and (max-width: 840px) {
+  .accordionChunk:first-child {
+    padding-top: 72px;
+  }
+  .ruleNav {
+    margin-top: 1.4rem;
+  }
+  .accordionBtn {
+    max-width: 70%;
+    font-size: 1.9rem;
+    font-size: 1.9rem;
+  }
+  .ruleWrap {
+    max-width: 70%;
+  }
+  .escape {
+    height: 7rem;
+    top: 2rem;
+    left: 0.7rem;
+  }
+  .ruleNav {
+    top: 16.5%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .accordionChunk:first-child {
+    padding-top: 74px;
+  }
+  .ruleNav {
+    margin-top: -0.8rem;
+  }
+  .accordionBtn {
+    max-width: 77%;
+    padding: 7px 1.4rem 0 1.4rem;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #979dac;
+    height: 38px;
+  }
+  .ruleWrap {
+    max-width: 77%;
+  }
+  .escape {
+    height: 5.7rem;
+    top: 1.2rem;
+    left: 0.7rem;
+  }
+}
+@media screen and (max-width: 470px) {
+  .accordionChunk:first-child {
+    padding-top: 64px;
+  }
+  .ruleNav {
+    margin-top: -2rem;
+  }
+  .ruleText {
+    font-size: 0.98rem;
+  }
+  .historyMenu {
+    font-size: 1.5rem;
+  }
+  .historyMenuSpan {
+    font-size: 1.5rem;
+  }
+  .accordionBtn {
+    max-width: 82%;
+    font-size: 1.3rem;
+    height: 32px;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+  }
+  .ruleWrap {
+    max-width: 82%;
+  }
+  .escape {
+    height: 5rem;
+    top: 3.3rem;
+    left: 0.7rem;
+  }
+}

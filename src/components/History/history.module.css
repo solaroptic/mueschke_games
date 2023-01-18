@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Cavalier-Bold";
+  src: url(../Main/Cavalier-Bold.ttf);
+  font-style: normal;
+}
+
+.grass {
+  /*CONTAINER*/
+  position: relative;
+  max-width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: black;
+}
+.historylanding {
+  /*IMAGE*/
+  width: 100%;
+  opacity: 0.3;
+  display: block;
+}
+.historylanding2 {
+  /*IMAGE*/
+  display: none;
+  width: 100%;
+  height: 125%;
+  opacity: 0.3;
+}
+
+.layover {
+  /* div for writing over image */
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.storyPara {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: aliceblue;
+  line-height: 25.2px;
+  font-size: 1.2rem;
+  text-align: left;
+  text-indent: 1rem;
+  width: 60vw;
+  top: 10%;
+  margin: 4rem auto 1rem auto;
+}
+.historyNav {
+  position: absolute;
+  font-family: "Cavalier-Bold";
+  color: aliceblue;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+.historyMenu {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  transition: 1s;
+  cursor: pointer;
+  color: #979dac;
+}
+.historyMenu:hover {
+  transform: scale(1.1);
+}
+.historyMenu.chosen {
+  color: #0466c8;
+}
+.historyMenu.ruleChosen {
+  color: aliceblue;
+}
+.historyMenuSpan {
+  font-size: 1.5rem;
+}
+.slideSetup {
+  position: absolute;
+  max-height: 575px;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  border-radius: 12px;
+}
+.leftArrow {
+  position: absolute;
+  color: aliceblue;
+  top: 33%;
+  left: 12%;
+  font-size: 5rem;
+}
+.leftArrow:hover {
+  color: #0466c8;
+  cursor: pointer;
+}
+.rightArrow {
+  position: absolute;
+  color: aliceblue;
+  top: 33%;
+  right: 12%;
+  font-size: 5rem;
+}
+.rightArrow:hover {
+  cursor: pointer;
+  color: #0466c8;
+}
+.dotsGroup {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: flex;
+  justify-content: center;
+}
+.dots {
+  color: aliceblue;
+  position: relative;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 2rem;
+  z-index: 2;
+  transition: transform 0.25s;
+}
+.dots:active {
+  color: #0466c8;
+}
+.dots:hover {
+  transform: scale(1.2);
+}
+.escape {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  height: 170px;
+  top: 8px;
+  left: 60px;
+  transition: 0.7s;
+}
+.escape:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+@media screen and (max-width: 1390px) {
+  .historylanding {
+    width: 155%;
+    margin-left: -20rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .escape {
+    height: 170px;
+    top: 8px;
+    left: 2rem;
+  }
+  .historylanding {
+    width: 155%;
+    margin-left: -20rem;
+  }
+  .storyPara {
+    font-size: 1.2rem;
+    width: 75vw;
+    margin: 12rem auto 1rem auto;
+  }
+  .historyMenu {
+    font-size: 1.8rem;
+  }
+  .historyMenuSpan {
+    font-size: 1.5rem;
+  }
+  .layover {
+    top: 40%;
+  }
+  .slideSetup {
+    max-height: 550px;
+  }
+  .leftArrow {
+    left: 12%;
+    top: 40%;
+  }
+  .rightArrow {
+    right: 12%;
+    top: 40%;
+  }
+  .dotsGroup {
+    top: 85%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .escape {
+    height: 8.4rem;
+    top: 2rem;
+    left: 1.55rem;
+  }
+  .storyPara {
+    font-size: 1.1rem;
+    width: 75vw;
+    margin: 13rem auto 1rem auto;
+  }
+  .historylanding {
+    display: none;
+  }
+  .historylanding2 {
+    /*IMAGE*/
+    display: block;
+  }
+  .historyMenu {
+    font-size: 1.5rem;
+  }
+  .historyNav {
+    width: 60%;
+  }
+  .historyMenuSpan {
+    font-size: 1.2rem;
+  }
+  .slideSetup {
+    max-height: 500px;
+  }
+  .leftArrow {
+    left: 5%;
+  }
+  .rightArrow {
+    right: 5%;
+  }
+  .dotsGroup {
+    top: 85%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .escape {
+    height: 16vw;
+    top: 2.4rem;
+    left: 4vw;
+  }
+  .storyPara {
+    font-size: 1.05rem;
+    margin: 16rem auto 1rem auto;
+    width: 80vw;
+  }
+  .leftArrow {
+    left: 0.5%;
+  }
+  .rightArrow {
+    right: 0.5%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .layover {
+    top: 30%;
+  }
+  .historylanding2 {
+    height: 100%;
+  }
+  .escape {
+    top: 1.4rem;
+  }
+  .storyPara {
+    font-size: 0.96rem;
+    margin: 20rem auto 1rem auto;
+    width: 85vw;
+  }
+  .historyMenu {
+    font-size: 1rem;
+  }
+  .historyNav {
+    width: 70%;
+    top: 3%;
+    gap: 1rem;
+  }
+  .historyMenuSpan {
+    font-size: 0.75rem;
+  }
+  .slideSetup {
+    max-height: 460px;
+  }
+  .leftArrow {
+    left: 1%;
+    z-index: 9;
+  }
+  .rightArrow {
+    right: 1%;
+    z-index: 9;
+  }
+  .dotsGroup {
+    top: 70%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .layover {
+    top: 32%;
+  }
+  .historylanding2 {
+    height: 115%;
+  }
+  .storyPara {
+    margin: 19rem auto 1rem auto;
+  }
+  .historyNav {
+    width: 70%;
+    top: 3.5%;
+    gap: 0.5rem;
+  }
+  .slideSetup {
+    max-height: 380px;
+  }
+  .leftArrow {
+    left: 2%;
+  }
+  .rightArrow {
+    right: 2%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .escape {
+    top: 2.8rem;
+    left: 0rem;
+  }
+  .historylanding2 {
+    height: 125%;
+  }
+  .storyPara {
+    font-size: 0.92rem;
+    margin: 30rem auto 1rem auto;
+    width: 85vw;
+  }
+  .historyMenu {
+    font-size: 1rem;
+  }
+  .historyNav {
+    width: 80%;
+    top: 4.3%;
+    gap: 0.4rem;
+  }
+  .historyMenuSpan {
+    font-size: 0.85rem;
+  }
+  .dotsGroup {
+    top: 65%;
+  }
+}
